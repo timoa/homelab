@@ -31,6 +31,8 @@ Some components can be upgraded (CPU, GPU) or extended (memory, storage) is why 
 
 ### My configuration
 
+![Homelab Server Timoa][homelab-timoa-img]*I'm not a gamer but I wanted a Homelab server with the K8S color :)*
+
 I bought my configuration in July 2019 on Amazon UK.
 
 My budget was under £500/$600 but I forgot that the AMD Ryzen X series had more cores but no GPU embeded and I had to buy an additional GPU card.
@@ -59,7 +61,7 @@ The choice of the components is based on the motherboard and CPU I wanted and th
 * Step by step creation of a VM for a K8S cluster/node
 * Share K8S yaml files to deploy different apps
 
-
+[homelab-timoa-img]: /doc/img/homelab-server-timoa.jpg
 [prometheus-website]: https://prometheus.io/
 [grafana-website]: https://grafana.com/grafana
 [gocd-website]: https://www.gocd.org/
