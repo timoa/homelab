@@ -31,7 +31,9 @@ Some components can be upgraded (CPU, GPU) or extended (memory, storage) is why 
 
 ### My configuration
 
-![Homelab Server Timoa][homelab-timoa-img]*I'm not a gamer but I wanted a Homelab server with the K8S color :)*
+![Homelab Server Timoa][homelab-timoa-img]
+
+*I'm not a gamer but I wanted a Homelab server with the K8S color :)*
 
 I bought my configuration in July 2019 on Amazon UK.
 
