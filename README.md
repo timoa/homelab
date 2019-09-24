@@ -6,13 +6,22 @@ Experimentation of running an HomeLab server running [Proxmox][proxmox-website] 
 
 The idea is to run the following containers under K8S:
 
+### Monitoring
+
 * [Prometheus][prometheus-website]
 * [Grafana][grafana-website]
 * [Elasticsearch / Kibana][elasticsearch-website]
+* [Speedy][speedy-github] (bandwidth monitoring)
+
+### CI/CD
+
 * [GoCD server][gocd-website]
 * [GoCD agent][gocd-website] (agents on-demand)
+* [Concourse CI][concourse-ci-website]
+
+### Machine Learning
+
 * [TensorFlow][tensorflow-dockerhub]
-* etc.
 
 Also my other personal projects:
 
@@ -67,7 +76,9 @@ The choice of the components is based on the motherboard and CPU I wanted and th
 [prometheus-website]: https://prometheus.io/
 [grafana-website]: https://grafana.com/grafana
 [elasticsearch-website]: https://www.elastic.co/products/elastic-stack
+[speedy-github]: https://github.com/stefanwalther/speedy
 [gocd-website]: https://www.gocd.org/
+[concourse-ci-website]: https://concourse-ci.org/
 [proxmox-website]: https://www.proxmox.com/en/proxmox-ve
 [k8s-website]: https://kubernetes.io/
 [tensorflow-website]: https://www.tensorflow.org/
