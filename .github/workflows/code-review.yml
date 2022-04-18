@@ -23,12 +23,15 @@ jobs:
 
       # Run init to get module code to be able to use `--module`
       - name: Terraform init
+        working-directory: ./terraform
         run: |
           terraform init
 
       # Run TFLint
       - name: tflint with reviewdog output on the PR
         uses: reviewdog/action-tflint@86b1913cb664b079cb435014ad64835acf66c639 # tag=v1.16.2
+        with:
+          working-directory: ./terraform
 
   # -- SECURITY ---------------------------------------------------------------
   tfsec:
@@ -42,3 +45,5 @@ jobs:
       # Run TFSec
       - name: Run tfsec with reviewdog output on the PR
         uses: reviewdog/action-tfsec@1f6d9e763be79aed3128bc23efaead45d7e11430 # tag=v1.14.4
+        with:
+          working-directory: ./terraform
