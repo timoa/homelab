@@ -73,7 +73,7 @@ The choice of the components is based on the motherboard and CPU I wanted and th
 * Step by step creation of a VM for a K8S cluster/node
 * Share K8S yaml files to deploy different apps
 
-[homelab-timoa-img]: /doc/img/homelab-server-timoa.jpg
+[homelab-timoa-img]: /docs/img/homelab-server-timoa.jpg
 [prometheus-website]: https://prometheus.io/
 [grafana-website]: https://grafana.com/grafana
 [elasticsearch-website]: https://www.elastic.co/products/elastic-stack
