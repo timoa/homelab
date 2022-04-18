@@ -1,0 +1,44 @@
+name: Code Review
+
+on: [pull_request]
+
+jobs:
+
+  # -- LINT -------------------------------------------------------------------
+  tflint:
+    name: runner / tflint
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@dcd71f646680f2efd8db4afa5ad64fdcba30e748 # tag=v3
+
+      # Install latest Terraform manually as
+      #  Docker-based GitHub Actions are
+      #  slow due to lack of caching
+      # Note: Terraform is not needed for tflint
+      - name: Install Terraform
+        run: |
+          brew install terraform
+
+      # Run init to get module code to be able to use `--module`
+      - name: Terraform init
+        run: |
+          terraform init
+
+      # Run TFLint
+      - name: tflint with reviewdog output on the PR
+        uses: reviewdog/action-tflint@86b1913cb664b079cb435014ad64835acf66c639 # tag=v1.16.2
+
+  # -- SECURITY ---------------------------------------------------------------
+  tfsec:
+    name: runner / tfsec
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@dcd71f646680f2efd8db4afa5ad64fdcba30e748 # tag=v3
+
+      # Run TFSec
+      - name: Run tfsec with reviewdog output on the PR
+        uses: reviewdog/action-tfsec@1f6d9e763be79aed3128bc23efaead45d7e11430 # tag=v1.14.4
