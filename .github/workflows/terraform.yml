@@ -17,19 +17,19 @@ jobs:
 
       - name: Terraform Format
         id: fmt
-        run: terraform fmt -check
         working-directory: ./terraform
+        run: terraform fmt -check
         continue-on-error: true
 
       - name: Terraform Init
         id: init
-        run: terraform init
         working-directory: ./terraform
+        run: terraform init
 
       - name: Terraform Plan
         id: apply
-        run: terraform plan
         working-directory: ./terraform
+        run: terraform plan
 
   # -- SAST SCAN --------------------------------------------------------------
   code-security:
@@ -68,8 +68,6 @@ jobs:
         uses: terraform-docs/gh-actions@f6d59f89a280fa0a3febf55ef68f146784b20ba0 # tag=v1.0.0
         with:
           working-dir: ./terraform
-          output-file: USAGE.md
-          output-method: inject
           git-push: "true"
           git-commit-message: "chore(docs): update Terraform docs"
 
