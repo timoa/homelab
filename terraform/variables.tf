@@ -21,7 +21,6 @@ variable "stage" {
 variable "pm_host" {
   type        = string
   description = "Proxmox hostname or IP address"
-  default     = "localhost"
 }
 
 variable "pm_port" {
@@ -33,13 +32,11 @@ variable "pm_port" {
 variable "pm_user" {
   type        = string
   description = "Proxmo username"
-  default     = "root"
 }
 
 variable "pm_password" {
   type        = string
   description = "Password define during Proxmox installation"
-  default     = "my-secure-password"
 }
 
 variable "pm_tls_insecure" {
