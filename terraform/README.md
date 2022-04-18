@@ -1,3 +1,43 @@
+# Terraform project
+
+## Usage
+
+Set the default variables to access your Proxmox server in your local config (`~/.zprofile` or `./bash_profile`)
+
+```bash
+# Proxmox
+export TF_VAR_pm_host="homelab.at-home.net"
+export TF_VAR_pm_port="8006" # Optional
+export TF_VAR_pm_user="root"
+export TF_VAR_pm_password="your-secure-password"
+export TF_VAR_pm_tls_insecure="true" # if you have a self-signed certificate
+```
+
+Initialize Terraform from the Terraform folder
+
+```bash
+cd terraform
+terraform init
+````
+
+Check what you will install first with Terraform Plan (dry run)
+
+```bash
+terraform plan
+```
+
+Create the resources with Terraform Apply
+
+```bash
+terraform apply
+```
+
+To delete the resources, just run Terraform destroy
+
+```bash
+terraform destroy
+```
+
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
