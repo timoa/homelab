@@ -26,11 +26,6 @@ jobs:
         working-directory: ./terraform
         run: terraform init
 
-      - name: Terraform Plan
-        id: apply
-        working-directory: ./terraform
-        run: terraform plan
-
   # -- SAST SCAN --------------------------------------------------------------
   code-security:
     runs-on: ubuntu-latest
