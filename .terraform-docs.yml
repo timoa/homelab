@@ -1,9 +1,5 @@
 formatter: markdown table
 
-sections:
-  hide:
-    - providers
-
 output:
   file: "USAGE.md"
   mode: inject
