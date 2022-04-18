@@ -18,15 +18,18 @@ jobs:
       - name: Terraform Format
         id: fmt
         run: terraform fmt -check
+        working-directory: ./terraform
         continue-on-error: true
 
       - name: Terraform Init
         id: init
         run: terraform init
+        working-directory: ./terraform
 
       - name: Terraform Plan
         id: apply
         run: terraform plan
+        working-directory: ./terraform
 
   # -- SAST SCAN --------------------------------------------------------------
   code-security:
@@ -64,7 +67,7 @@ jobs:
       - name: Terraform Docs
         uses: terraform-docs/gh-actions@v1.0.0
         with:
-          working-dir: .
+          working-dir: ./terraform
           output-file: USAGE.md
           output-method: inject
           git-push: "true"
