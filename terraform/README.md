@@ -44,7 +44,7 @@ terraform destroy
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0 |
-| <a name="requirement_proxmox"></a> [proxmox](#requirement\_proxmox) | 2.9.7 |
+| <a name="requirement_proxmox"></a> [proxmox](#requirement\_proxmox) | 2.9.8 |
 
 ## Providers
 
