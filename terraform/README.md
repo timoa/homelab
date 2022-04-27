@@ -52,7 +52,9 @@ No providers.
 
 ## Modules
 
-No modules.
+| Name | Source | Version |
+|------|--------|---------|
+| <a name="module_microk8s"></a> [microk8s](#module\_microk8s) | ./modules/vm-qemu | n/a |
 
 ## Resources
 
@@ -68,7 +70,7 @@ No resources.
 | <a name="input_pm_port"></a> [pm\_port](#input\_pm\_port) | Proxmox port | `string` | `8006` | no |
 | <a name="input_pm_user"></a> [pm\_user](#input\_pm\_user) | Proxmo username | `string` | n/a | yes |
 | <a name="input_pm_password"></a> [pm\_password](#input\_pm\_password) | Password define during Proxmox installation | `string` | n/a | yes |
-| <a name="input_pm_tls_insecure"></a> [pm\_tls\_insecure](#input\_pm\_tls\_insecure) | Check for TLS certificate | `bool` | `false` | no |
+| <a name="input_pm_tls_insecure"></a> [pm\_tls\_insecure](#input\_pm\_tls\_insecure) | Check for TLS certificate | `bool` | `true` | no |
 
 ## Outputs
 
