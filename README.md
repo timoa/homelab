@@ -1,6 +1,7 @@
 # HomeLab
 
-Experimentation of running an HomeLab server running [Proxmox][proxmox-website] + [K8S][k8s-website] clusters on VM.
+Experimentation of running an HomeLab server running [Proxmox][proxmox-website] +
+ [MicroK8S][microk8s-website] cluster on VM.
 
 ## The project
 
@@ -10,15 +11,16 @@ The idea is to run the following containers under K8S:
 
 * [Prometheus][prometheus-website]
 * [Grafana][grafana-website]
-* [Elasticsearch / Kibana][elasticsearch-website]
+* [Loki][loki-website]
+* [Falco][falco-github] (Docker security audit tool)
 * [cAdvisor][cadvisor-github] (Docker monitoring)
 * [Speedy][speedy-github] (bandwidth monitoring)
 
 ### CI/CD
 
-* [GoCD server][gocd-website]
-* [GoCD agent][gocd-website] (agents on-demand)
-* [Concourse CI][concourse-ci-website]
+* [GitLab server][gitlab-website]
+* [GitLab runners][gitlab-runners-website] (runners on-demand)
+* [ArgoCD][argocd-website]
 
 ### Machine Learning
 
@@ -37,7 +39,9 @@ Idealy, you need a CPU with as many as you can cores/threads and lot of memory.
 
 Of course, it depends of what you want to run on your HomeLab server and your budget.
 
-Some components can be upgraded (CPU, GPU) or extended (memory, storage) is why it's important to invest on a good motherboard that can handle upgrades later (with 4x slots of RAM instead of 2x for ex.).
+Some components can be upgraded (CPU, GPU) or extended (memory, storage) is why it's
+ important to invest on a good motherboard that can handle upgrades later
+ (with 4x slots of RAM instead of 2x for ex.).
 
 ### My configuration
 
@@ -47,9 +51,11 @@ I'm not a gamer but I wanted a Homelab server with the K8S color :)
 
 I bought my configuration in July 2019 on Amazon UK.
 
-My budget was under £500/$600 but I forgot that the AMD Ryzen X series had more cores but no GPU embeded and I had to buy an additional GPU card.
+My budget was under £500/$600 but I forgot that the AMD Ryzen X series had more
+ cores but no GPU embeded and I had to buy an additional GPU card.
 
-The choice of the components is based on the motherboard and CPU I wanted and the price at that time.
+The choice of the components is based on the motherboard and CPU I wanted and the
+ price at that time.
 
 | Type | Specs | Description | Price | ~$ |
 |---|---|---|---|---|
@@ -65,24 +71,26 @@ The choice of the components is based on the motherboard and CPU I wanted and th
 ## Software
 
 * [Proxmox VE][proxmox-website] (to manage the VM(s))
-* [Kubernetes][k8s-website] installed on VM
+* [MicroK8S][microk8s-website] installed on VM
 
 ## TODO
 
 * Step by step installation of Proxmox
-* Step by step creation of a VM for a K8S cluster/node
+* Step by step creation of a VM for a MicroK8S cluster/node
 * Share K8S yaml files to deploy different apps
 
 [homelab-timoa-img]: /docs/img/homelab-server-timoa.jpg
 [prometheus-website]: https://prometheus.io/
-[grafana-website]: https://grafana.com/grafana
-[elasticsearch-website]: https://www.elastic.co/products/elastic-stack
+[grafana-website]: https://grafana.com/grafana/
+[loki-website]: https://loki.io/
+[falco-github]: https://github.com/falcosecurity/falco
 [cadvisor-github]: https://github.com/google/cadvisor
 [speedy-github]: https://github.com/stefanwalther/speedy
-[gocd-website]: https://www.gocd.org/
-[concourse-ci-website]: https://concourse-ci.org/
+[gitlab-website]: https://gitlab.com/
+[gitlab-runners-website]: https://docs.gitlab.com/runner/
+[argocd-website]: https://argoproj.github.io/cd/
 [proxmox-website]: https://www.proxmox.com/en/proxmox-ve
-[k8s-website]: https://kubernetes.io/
+[microk8s-website]: https://microk8s.io/
 [tensorflow-website]: https://www.tensorflow.org/
 [tensorflow-dockerhub]: https://hub.docker.com/r/tensorflow/tensorflow/
 [chrome-tab-rotate-server-github]: https://github.com/timoa/chrome-tab-rotate-server
