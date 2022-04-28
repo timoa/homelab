@@ -42,5 +42,5 @@ variable "pm_password" {
 variable "pm_tls_insecure" {
   type        = bool
   description = "Check for TLS certificate"
-  default     = false
+  default     = true
 }
