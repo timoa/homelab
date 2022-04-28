@@ -73,7 +73,7 @@ jobs:
       - tests
       - code-security
       - documentation
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/master'
 
     steps:
       - name: Checkout
