@@ -1,7 +1,7 @@
 {
   "repositoryUrl": "https://github.com/timoa/homelab.git",
   "branches": [
-    "main"
+    "master"
   ],
   "tagFormat": "v${version}",
   "plugins": [
