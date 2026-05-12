@@ -49,6 +49,6 @@ jobs:
 
       # Run TFSec
       - name: Run tfsec with reviewdog output on the PR
-        uses: reviewdog/action-tfsec@a082bf6e7cea7bdf5a75aabd1d48484606ce1af4 # v1.20.1
+        uses: reviewdog/action-tfsec@a2f2edbf61c6bb22849de705d304b9d2af5f69cd # v1.30.0
         with:
           working-directory: ./terraform
