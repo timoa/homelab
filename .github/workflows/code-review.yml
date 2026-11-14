@@ -29,7 +29,7 @@ jobs:
 
       # Run TFLint
       - name: tflint with reviewdog output on the PR
-        uses: reviewdog/action-tflint@d39483f7058c6772a9641473d4d3b5c372a3a10d # v1.20.0
+        uses: reviewdog/action-tflint@8de8f6134bd8068970d7261f6b831964df82b92c # v1.29.0
         with:
           working-directory: ./terraform
 
